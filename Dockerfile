@@ -1,5 +1,5 @@
-FROM gradle:7.4.0-jdk11-alpine
+FROM openjdk:11-jdk-slim
 
-ADD . .
+ADD ./build/libs/demo-0.0.1-SNAPSHOT.jar /test.jar
 
-ENTRYPOINT ["./gradlew", "bootrun"]
+ENTRYPOINT ["java", "-jar", "/test.jar"]
