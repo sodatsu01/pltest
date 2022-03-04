@@ -3,7 +3,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- none
+  branches:
+    include:
+      - main
 
 variables:
   dockerRegistryServiceConnection: '600e9d2e-46e7-4506-bddf-f7e16e45afe4'

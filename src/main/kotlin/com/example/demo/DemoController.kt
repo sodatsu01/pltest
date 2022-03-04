@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping
 @RestController
 class DemoController {
 
-  @GetMapping("/demo")
+  @GetMapping("/")
   fun demo(): String {
-    return "demo"
+    return "test"
   }
 
 }
