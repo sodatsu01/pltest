@@ -8,7 +8,7 @@ class DemoController {
 
   @GetMapping("/")
   fun demo(): String {
-    return "test both"
+    return "test 2 only"
   }
 
 }
