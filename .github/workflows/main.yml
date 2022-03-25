@@ -1,4 +1,5 @@
 name: Build and Push
+on: none
 jobs:
   build-and-push:
 
