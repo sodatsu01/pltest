@@ -7,11 +7,13 @@ jobs:
     timeout-minutes: 300
 
     steps:
+    - uses: actions/checkout@v1
+
     - name: bootrun
       uses: eskatos/gradle-command-action@v1
       with:
         arguments: bootJar
-    - uses: actions/checkout@v1
+
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
