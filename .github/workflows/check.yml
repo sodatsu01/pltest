@@ -1,0 +1,17 @@
+name: code analysis
+on: [pull_request]
+jobs:
+  code-analysis:
+
+    runs-on: ubuntu-18.04
+    timeout-minutes: 300
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: detekt
+      uses: alaegin/Detekt-Action@v1.19
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        detekt_config: config/detekt/detekt.yml
+        reviewdog_reporter: github-pr-review
