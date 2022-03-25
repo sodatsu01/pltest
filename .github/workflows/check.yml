@@ -1,0 +1,15 @@
+name: code analysis
+on: workflow_dispatch
+jobs:
+  code-analysis:
+
+    runs-on: ubuntu-18.04
+    timeout-minutes: 300
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: detekt
+      uses: eskatos/gradle-command-action@v1
+      with:
+        arguments: detekt
